@@ -1,6 +1,6 @@
-use core::error;
 use fs_err as fs;
 use std::{
+    error,
     env,
     io::{self, Write},
     process::ExitCode,
