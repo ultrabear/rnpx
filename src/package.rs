@@ -1,5 +1,5 @@
 use fs_err as fs;
-use std::{collections::HashMap, error, io};
+use std::{collections::HashMap, error};
 
 use serde_derive::Deserialize;
 
