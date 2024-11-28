@@ -17,6 +17,7 @@ mod runner;
 /// A basic program to run package.json scripts without pnpm or npm startup overhead
 /// no workspace support (yet, maybe ever idk)
 #[derive(clap::Parser)]
+#[clap(version)]
 struct Args {
     /// The program or package.json defined script that rnpx will run
     program: String,
