@@ -1,8 +1,15 @@
 [package]
 name = "rnpx"
-description = "a faster runner for package.json scripts, think dash"
 version = "0.1.2"
 edition = "2021"
+description = "a faster runner for package.json scripts, think dash"
+keywords = ["node", "javascript", "cli"]
+categories = ["development-tools"]
+homepage = "https://github.com/ultrabear/rnpx"
+repository = "https://github.com/ultrabear/rnpx"
+readme = "README.md"
+license = "GPL-3.0"
+rust-version = "1.82"
 
 [profile.dev]
 opt-level = 1
