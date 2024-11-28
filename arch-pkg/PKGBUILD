@@ -1,0 +1,16 @@
+pkgname="rnpx"
+pkgver="0.1.0"
+pkgrel="1"
+pkgdesc="A much faster minimal replacement for package.json script running"
+arch=("x86_64")
+license=("GPL-3.0-or-later")
+source=("rnpx")
+sha512sums=("SKIP")
+
+
+package() {
+  mkdir -p "${pkgdir}/usr/bin"
+  cp "${srcdir}/rnpx" "${pkgdir}/usr/bin/rnpx"
+  chmod +x "${pkgdir}/usr/bin/rnpx"
+
+}
