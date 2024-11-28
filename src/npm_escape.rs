@@ -1,5 +1,5 @@
 fn escape_one(s: &str) -> String {
-    return format!("{:?}", s);
+    format!("{:?}", s)
 }
 
 /// performs escaping similar enough to what pnpm does for packagejson scripts (bad but whatever)

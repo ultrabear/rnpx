@@ -12,7 +12,6 @@ pub struct PackageJson {
 }
 
 pub fn parse() -> Result<PackageJson, Box<dyn error::Error>> {
-    
     let pnpm = "pnpm-lock.yaml";
     let npm = "package-lock.json";
 

@@ -16,13 +16,14 @@ mod runner;
 
 /// A basic program to run package.json scripts without pnpm or npm startup overhead
 /// no workspace support (yet, maybe ever idk)
-#[derive(clap::Parser)]
+#[derive(clap::Parser, Debug)]
 #[clap(version)]
 struct Args {
     /// The program or package.json defined script that rnpx will run
     program: String,
 
     /// Args to pass to the running program
+    #[clap(trailing_var_arg(true), allow_hyphen_values(true))]
     args: Vec<String>,
 }
 
@@ -37,7 +38,7 @@ fn inner() -> Result<(), Box<dyn error::Error>> {
         Some(script) => {
             let run = escape_script(script, &args.args);
 
-            _ = writeln!(io::stdout(), "");
+            _ = writeln!(io::stdout());
             _ = writeln!(
                 io::stdout(),
                 "> {}@{} {} {}",
@@ -47,7 +48,7 @@ fn inner() -> Result<(), Box<dyn error::Error>> {
                 cwd.display()
             );
             _ = writeln!(io::stdout(), "> {run}");
-            _ = writeln!(io::stdout(), "");
+            _ = writeln!(io::stdout());
 
             exec("sh", vec!["-c".into(), run])?;
         }
