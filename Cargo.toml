@@ -1,6 +1,6 @@
 [package]
 name = "rnpx"
-version = "0.1.4"
+version = "0.1.5"
 edition = "2021"
 description = "a faster runner for package.json scripts, think dash"
 keywords = ["node", "javascript", "cli"]
