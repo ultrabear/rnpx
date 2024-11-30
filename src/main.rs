@@ -1,7 +1,6 @@
 use fs_err as fs;
 use std::{
-    error,
-    env,
+    env, error,
     io::{self, Write},
     process::ExitCode,
 };
@@ -34,7 +33,11 @@ fn inner() -> Result<(), Box<dyn error::Error>> {
 
     let cwd = fs::canonicalize(env::current_dir()?)?;
 
-    match package_json.scripts.get(&args.program) {
+    match package_json
+        .scripts
+        .as_ref()
+        .and_then(|map| map.get(&args.program))
+    {
         Some(script) => {
             let run = escape_script(script, &args.args);
 
