@@ -15,5 +15,5 @@ Do you use arch? congratulations, use the provided `./arch-prepare.sh` and `./ar
 
 Do you not use arch?:
 ```
-cargo install rnpx@0.1.3 --locked
+cargo install rnpx --locked
 ```
