@@ -12,7 +12,7 @@ Are you tired of pnpm taking 500ms to startup biome which then takes under 50ms?
 ## Installation
 Do you use arch? Congratulations, use the provided `./arch-prepare.sh` and `./arch-pkg/PKGBUILD` to make your own package from a tagged commit, or use the released tarballs
 
-Do you not use arch? Install rnpx from the crates.io registry using `cargo` (in turn packaged by (rustup)[https://rustup.rs]):
+Do you not use arch? Install rnpx from the crates.io registry using `cargo` (in turn packaged by [rustup](https://rustup.rs)):
 ```
 cargo install rnpx --locked
 ```
